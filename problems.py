@@ -9,7 +9,6 @@ class Solution:
         if i != 0:
           nums[i] = 0
         t += 1
-        print(nums)
     pass
 
 nums = [0,0,0,0,5,0,1,0,0]
