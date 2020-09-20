@@ -13,6 +13,8 @@ class Solution:
 
   def kth_largest_num(self, nums, k):
   # works with the lists that not have duplications.
+    # input: [1,2,3,4,5,6,0,8,9]
+    # output: 6
     l = [0 for i in range(k)]
     for j in range(k):
       max = 0
