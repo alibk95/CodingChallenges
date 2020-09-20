@@ -12,29 +12,26 @@ class Solution:
     return nums
 
   def kth_largest_num(self, nums, k):
+  # works with the lists that not have duplications.
     l = [0 for i in range(k)]
     for j in range(k):
-      t = 0
+      max = 0
       for i in range(len(nums)):
-        if nums[i] > t:
-          t = nums[i]
+        if nums[i] > max:
+          max = nums[i]
           u = i
-      if nums[u] != l[j]:
-        l[j] = nums[u]
-        nums[u] = 0
+      l[j] = nums[u]
+      nums[u] = 0
 
+    return max,l
 
-
-
-
-    return t,l
 
 # driver code: 1
 nums = [0,0,0,0,5,0,1,0,0]
 print(Solution().moveZeros(nums))
 
 # driver code: 2
-nums = [1,2,3,4,5,6,0,8,9,9,9]
+nums = [1,2,3,4,5,6,0,8,9]
 k = 3
 # res: 6
 print(Solution().kth_largest_num(nums, k))
