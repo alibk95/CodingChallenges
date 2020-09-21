@@ -9,4 +9,9 @@ Minimize the total number of operations.
 ## 2- Kth-largest 
 Given a list, find the k-th largest element in the list. <br>
 Input: list = [3, 5, 2, 4, 6, 8], k = 3 <br>
-Output: 5
+Output: 5 <br>
+## 3- Single Number
+Given a list of numbers, where every number shows up twice except for one number, find that one numbe. <br>
+Challenge: Find a way to do this using O(1) memory. <br>
+Input: [4, 3, 2, 4, 1, 3, 2] <br>
+Output: 1
