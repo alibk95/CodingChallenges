@@ -54,11 +54,11 @@ class Solution:
     return False
 
 
-  # driver code: 1
+  # driver code: move zeros
 nums = [0,0,0,0,5,0,1,0,0]
 print(Solution().moveZeros(nums))
 
-# driver code: 2
+# driver code: kth largest number
 nums = [1,2,3,4,5,6,0,8,9]
 k = 3
 # res: 6
