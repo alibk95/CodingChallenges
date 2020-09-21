@@ -27,8 +27,17 @@ class Solution:
 
     return max,l
 
+  def find_single(self, nums):
+    # XOR helps to do it very efficient with the space requirement of O(1) and time complexity of O(n)
+    # XOR of a number with itself is 0
+    # XOR of a number with 0 is the number itself
+    res = nums[0]
+    # Do XOR of all elements
+    for i in range(1, len(nums)):
+      res = res ^ nums[i]
+    return res
 
-# driver code: 1
+  # driver code: 1
 nums = [0,0,0,0,5,0,1,0,0]
 print(Solution().moveZeros(nums))
 
@@ -38,4 +47,6 @@ k = 3
 # res: 6
 print(Solution().kth_largest_num(nums, k))
 
-
+# driver code: single number
+nums = [4, 4, 3, 7, 3, 14, 6, 14, 5, 6, 5]
+print(Solution().find_single(nums))
