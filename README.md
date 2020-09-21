@@ -11,7 +11,13 @@ Given a list, find the k-th largest element in the list. <br>
 Input: list = [3, 5, 2, 4, 6, 8], k = 3 <br>
 Output: 5 <br>
 ## 3- Single Number
-Given a list of numbers, where every number shows up twice except for one number, find that one numbe. <br>
+Given a list of numbers, where every number shows up twice except for one number, find that one number. <br>
 Challenge: Find a way to do this using O(1) memory. <br>
 Input: [4, 3, 2, 4, 1, 3, 2] <br>
 Output: 1
+## 4- Two Sum
+Given a list of numbers, and a target number k. Return whether or not there are two numbers in the list that add up to k. <br>
+Given [4, 7, 1 , -3, 2] and k = 5 <br>
+return true since 4 + 1 = 5. <br>
+Try to do it in a single pass of the list. <br>
+2 solution is provided.
