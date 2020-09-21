@@ -37,6 +37,23 @@ class Solution:
       res = res ^ nums[i]
     return res
 
+  def two_sum(self, nums, k):
+    # [4,7,1,-3,2]
+    for i in range(len(nums)):
+      nums[i] = nums[i] - k
+      for j in range(i+1, len(nums)):
+        if nums[i] + nums[j] == 0:
+          return True
+    return False
+
+  def two_sum_2(self, nums, k):
+    # More pythonic way of doing it
+    for i in range(0, len(nums)):
+      if k - nums[i] in nums:
+        return True
+    return False
+
+
   # driver code: 1
 nums = [0,0,0,0,5,0,1,0,0]
 print(Solution().moveZeros(nums))
@@ -50,3 +67,10 @@ print(Solution().kth_largest_num(nums, k))
 # driver code: single number
 nums = [4, 4, 3, 7, 3, 14, 6, 14, 5, 6, 5]
 print(Solution().find_single(nums))
+
+# driver code: two sum
+nums = [3,2,0,1]
+k = 5
+# True
+print(Solution().two_sum(nums, k))
+#print(Solution().two_sum_2(nums, k))
