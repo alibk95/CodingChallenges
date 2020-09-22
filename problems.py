@@ -64,21 +64,42 @@ class Solution:
     return longest
 
 
-  # driver code: move zeros
+class MaxStack:
+  # simple stack with max functionality
+  def __init__(self):
+    self.stack = []
+    pass
+  def push(self, val):
+    self.stack.append(val)
+    return self.stack
+  def pop(self):
+    self.stack = self.stack[:-1]
+    return self.stack
+  def max(self):
+    max = 0
+    if self.stack == []:
+      return None
+    for num in self.stack:
+      if num > max:
+        max = num
+    return max
+
+
+# Driver code: move zeros
 nums = [0,0,0,0,5,0,1,0,0]
 print(Solution().moveZeros(nums))
 
-# driver code: kth largest number
+# Driver code: kth largest number
 nums = [1,2,3,4,5,6,0,8,9]
 k = 3
 # res: 6
 print(Solution().kth_largest_num(nums, k))
 
-# driver code: single number
+# Driver code: single number
 nums = [4, 4, 3, 7, 3, 14, 6, 14, 5, 6, 5]
 print(Solution().find_single(nums))
 
-# driver code: two sum
+# Driver code: two sum
 nums = [3,2,0,1]
 k = 5
 # True
@@ -89,3 +110,16 @@ print(Solution().two_sum(nums, k))
 str = 'aacbcddefff'
 # res = 4
 print(Solution().longest_length_substring(str))
+
+# Driver code: MaxStack
+s = MaxStack()
+s.push(1)
+s.push(4)
+s.push(3)
+s.push(5)
+print(s.max())
+# 5
+s.pop()
+s.pop()
+print(s.max())
+# 4
