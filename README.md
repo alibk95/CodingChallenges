@@ -21,3 +21,9 @@ Given [4, 7, 1 , -3, 2] and k = 5 <br>
 return true since 4 + 1 = 5. <br>
 Try to do it in a single pass of the list. <br>
 2 solution is provided.
+## 5- Longest length substring
+Given a string, find the length of the longest substring without repeating characters. <br>
+Input: "abcdefff" <br>
+Output: 6 <br>
+link to a useful video on how the algorithm works:
+[link](https://youtu.be/WKTgajDkVcA)
