@@ -30,3 +30,4 @@ link to a useful video on how the algorithm works:
 ## 6- Max Stack
 class for a stack (called MaxStack) that supports all the regular functions (push, pop) and an additional function of max() which returns 
 the maximum element in the stack (return None if the stack is empty). <br>
+I tried to implement the max() function so that the time complexity is O(1). 
