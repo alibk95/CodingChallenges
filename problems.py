@@ -65,61 +65,66 @@ class Solution:
 
 
 class MaxStack:
-  # simple stack with max functionality
+  # simple stack with max functionality. max function has the time complextity of O(1).
   def __init__(self):
     self.stack = []
+    # to keep track of the max value in the stack as we do push and pop
+    self.trackStack = []
     pass
   def push(self, val):
     self.stack.append(val)
-    return self.stack
+    if len(self.stack) == 1:
+      self.trackStack.append(val)
+      return
+    if val > self.trackStack[-1]:
+      self.trackStack.append(val)
+    else:
+      self.trackStack.append(self.trackStack[-1])
+
   def pop(self):
     self.stack = self.stack[:-1]
+    self.trackStack = self.trackStack[:-1]
     return self.stack
   def max(self):
-    max = 0
-    if self.stack == []:
-      return None
-    for num in self.stack:
-      if num > max:
-        max = num
-    return max
+    print(self.trackStack)
+    return self.trackStack[-1]
 
 
 # Driver code: move zeros
-nums = [0,0,0,0,5,0,1,0,0]
-print(Solution().moveZeros(nums))
+#nums = [0,0,0,0,5,0,1,0,0]
+#print(Solution().moveZeros(nums))
 
 # Driver code: kth largest number
-nums = [1,2,3,4,5,6,0,8,9]
-k = 3
+#nums = [1,2,3,4,5,6,0,8,9]
+#k = 3
 # res: 6
-print(Solution().kth_largest_num(nums, k))
+#print(Solution().kth_largest_num(nums, k))
 
 # Driver code: single number
-nums = [4, 4, 3, 7, 3, 14, 6, 14, 5, 6, 5]
-print(Solution().find_single(nums))
+#nums = [4, 4, 3, 7, 3, 14, 6, 14, 5, 6, 5]
+#print(Solution().find_single(nums))
 
 # Driver code: two sum
-nums = [3,2,0,1]
-k = 5
+#nums = [3,2,0,1]
+#k = 5
 # True
-print(Solution().two_sum(nums, k))
+#print(Solution().two_sum(nums, k))
 #print(Solution().two_sum_2(nums, k))
 
 # Driver code: longest substring
-str = 'aacbcddefff'
+#str = 'aacbcddefff'
 # res = 4
-print(Solution().longest_length_substring(str))
+#print(Solution().longest_length_substring(str))
 
 # Driver code: MaxStack
-s = MaxStack()
-s.push(1)
-s.push(4)
-s.push(3)
-s.push(5)
-print(s.max())
+#s = MaxStack()
+#s.push(1)
+#s.push(0)
+#s.push(6)
+#s.push(5)
+#print(s.max())
 # 5
-s.pop()
-s.pop()
-print(s.max())
+#s.pop()
+#s.pop()
+#print(s.max())
 # 4
