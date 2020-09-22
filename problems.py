@@ -53,6 +53,16 @@ class Solution:
         return True
     return False
 
+  def longest_length_substring(self, str):
+    longest = 0
+    aux = []
+    for s in str:
+      if s in aux:
+        aux = aux[aux.index(s)+1:]
+      aux.append(s)
+      longest = max(longest, len(aux))
+    return longest
+
 
   # driver code: move zeros
 nums = [0,0,0,0,5,0,1,0,0]
@@ -74,3 +84,8 @@ k = 5
 # True
 print(Solution().two_sum(nums, k))
 #print(Solution().two_sum_2(nums, k))
+
+# Driver code: longest substring
+str = 'aacbcddefff'
+# res = 4
+print(Solution().longest_length_substring(str))
