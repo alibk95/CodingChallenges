@@ -27,3 +27,6 @@ Input: "abcdefff" <br>
 Output: 6 <br>
 link to a useful video on how the algorithm works:
 [link](https://youtu.be/WKTgajDkVcA)
+## 6- Max Stack
+class for a stack (called MaxStack) that supports all the regular functions (push, pop) and an additional function of max() which returns 
+the maximum element in the stack (return None if the stack is empty). <br>
