@@ -89,6 +89,13 @@ class Solution:
     else:
       return False
 
+  def buy_and_sell(self, nums):
+    max = nums[1] - nums[0]
+    for i in range(len(nums)):
+      for j in range(i+1, len(nums)):
+        if nums[j] - nums[i] > max:
+          max = nums[j] - nums[i]
+    return max
 
 class MaxStack:
   # simple stack with max functionality. max function has the time complextity of O(1).
@@ -159,3 +166,8 @@ class MaxStack:
 #str1 = '(((((((()'
 #str2 = '{}'
 #print(Solution().balanced_parenthesis(str1))
+
+# Driver code: buy and sell
+#nums = [9, 11, 8, 5, 7, 10]
+#res: 5 (10 - 5)
+#print(Solution().buy_and_sell(nums))
