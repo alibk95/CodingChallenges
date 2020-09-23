@@ -63,6 +63,32 @@ class Solution:
       longest = max(longest, len(aux))
     return longest
 
+  def balanced_parenthesis(self, str):
+    # [()]{}
+    # True
+    if str == None:
+      return True
+    stack = ['#']
+    top = stack[-1]
+    map = {")": "(", "}": "{", "]": "["}
+    for s in str:
+      print(s)
+      if s in map:
+        if stack[-1] == '#':
+          return False
+        if stack[-1] != '#':
+          top = stack.pop()
+          print("pop ", stack)
+        if map[s] != top:
+          return False
+      else:
+        stack.append(s)
+        print("push ", stack)
+    if stack[-1] == '#':
+      return True
+    else:
+      return False
+
 
 class MaxStack:
   # simple stack with max functionality. max function has the time complextity of O(1).
@@ -128,3 +154,8 @@ class MaxStack:
 #s.pop()
 #print(s.max())
 # 4
+
+# Driver code: balanced parenthesis
+#str1 = '(((((((()'
+#str2 = '{}'
+#print(Solution().balanced_parenthesis(str1))
