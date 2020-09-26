@@ -49,4 +49,9 @@ You are given an array. Each element represents the price of a stock on that par
 For example: [9, 11, 8, 5, 7, 10]
 
 Here, the optimal trade is to buy when the price is 5, and sell when it is 10, so the return value should be 5 (profit = 10 - 5 = 5).
-
+## 9- Max contiguous subarray sum
+You are given an array of integers. Find the maximum sum of all possible contiguous subarrays of the array. <br>
+Example: <br>
+[34, -50, 42, 14, -5, 86]<br>
+Given this input array, the output should be 137. The contiguous subarray with the largest sum is [42, 14, -5, 86].<br>
+Your solution should run in linear time ( O(n) ).
