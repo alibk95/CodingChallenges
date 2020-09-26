@@ -97,6 +97,18 @@ class Solution:
           max = nums[j] - nums[i]
     return max
 
+  def max_subarray_sum(self, nums):
+    # time complexity of O(n)
+    max = 0
+    t = 0
+    for i in range(len(nums)):
+      max = max + nums[i]
+      if max < 0:
+        max = 0
+      elif t < max:
+        t = max
+    return t
+
 class MaxStack:
   # simple stack with max functionality. max function has the time complextity of O(1).
   def __init__(self):
@@ -171,3 +183,7 @@ class MaxStack:
 #nums = [9, 11, 8, 5, 7, 10]
 #res: 5 (10 - 5)
 #print(Solution().buy_and_sell(nums))
+
+# Code driver: max subarray sum
+nums = [-4, -5, -2, 1]
+print(Solution().max_subarray_sum(nums))
