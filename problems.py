@@ -185,5 +185,5 @@ class MaxStack:
 #print(Solution().buy_and_sell(nums))
 
 # Code driver: max subarray sum
-nums = [-4, -5, -2, 1]
-print(Solution().max_subarray_sum(nums))
+#nums = [-4, -5, -2, 1]
+#print(Solution().max_subarray_sum(nums))
