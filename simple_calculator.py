@@ -103,6 +103,8 @@ def evaluate(tokens):
 
 
 # Code driver: simple calculator
+# Time Complexity: O(n)
+# Space Complexity: O(n)
 print(evaluate("10 + 2 * 6"))
 print(evaluate("100 * 2 + 12"))
 print(evaluate("100 * ( 2 + 12 )"))

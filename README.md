@@ -55,3 +55,8 @@ Example: <br>
 [34, -50, 42, 14, -5, 86]<br>
 Given this input array, the output should be 137. The contiguous subarray with the largest sum is [42, 14, -5, 86].<br>
 Your solution should run in linear time ( O(n) ).
+## 10- Simple Calculator 
+Given a mathematical expression with just single digits, plus signs, negative signs, and brackets, evaluate the expression. 
+Assume the expression is properly formed. <br>
+Input: - ( 3 + ( 2 - 1 ) ) <br>
+Output: -4 
