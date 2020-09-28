@@ -124,6 +124,31 @@ class Solution:
                     arr.append(course)
                     print(arr)
 
+    def edit_distance(self, str1, str2, m, n):
+        # A Naive recursive Python program to fin minimum number
+        # operations to convert str1 to str2
+        # If first string is empty, the only option is to
+        # insert all characters of second string into first
+        if m == 0:
+            return n
+        # If second string is empty, the only option is to
+        # remove all characters of first string
+        if n == 0:
+            return m
+        # If last characters of two strings are same, nothing
+        # much to do. Ignore last characters and get count for
+        # remaining strings.
+        if str1[m-1] == str2[n-1]:
+            return self.edit_distance(str1, str2, m-1, n-1)
+        # If last characters are not same, consider all three
+        # operations on last character of first string, recursively
+        # compute minimum cost for all three operations and take
+        # minimum of three values.
+        return 1 + min(
+            self.edit_distance(str1, str2, m, n-1),
+            self.edit_distance(str1, str2, m-1, n),
+            self.edit_distance(str1, str2, m-1, n-1)
+            )
 
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -212,3 +237,11 @@ class MaxStack:
 #  'CSC100': []
 # }
 # print(Solution().courses_to_take(courses))
+
+# Code driver: Edit distance
+# Also in this example using recursive function in a class is shown.
+# str1 = 'biting'
+# str2= 'sitting'
+# m = len(str1)
+# n = len(str2)
+# print(Solution().edit_distance(str1, str2, m, n))
