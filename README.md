@@ -60,3 +60,16 @@ Given a mathematical expression with just single digits, plus signs, negative si
 Assume the expression is properly formed. <br>
 Input: - ( 3 + ( 2 - 1 ) ) <br>
 Output: -4 
+## 11- Course prerequisites
+You are given a hash table where the key is a course code, and the value is a list of all the course codes that are
+prerequisites for the key. Return a valid ordering in which we can complete the courses. If no such ordering exists,
+return NULL. 
+```
+{
+  'CSC300': ['CSC100', 'CSC200'], 
+  'CSC200': ['CSC100'], 
+  'CSC100': []
+}
+```
+and the output should be as follows:<br>
+```['CSC100', 'CSC200', 'CSCS300']```
