@@ -111,6 +111,11 @@ class Solution:
 
     def courses_to_take(self, courses):
         # Needs work and improvement
+        # input is a hashmap or hash table and to access the hash map we have the following ways:
+        # my_dict={'Dave' : '001' , 'Ava': '002' , 'Joe': '003'}
+        # print(my_dict.keys())
+        # print(my_dict.values())
+        # print(my_dict.get('Dave'))
         print(courses)
         arr = []
         while len(arr) != len(courses):
