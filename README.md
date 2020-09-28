@@ -73,3 +73,10 @@ return NULL.
 ```
 and the output should be as follows:<br>
 ```['CSC100', 'CSC200', 'CSCS300']```
+## 12- Edit distance
+Given two strings, determine the edit distance between them. The edit distance is defined as the minimum number of edits
+(insertion, deletion, or substitution) needed to change one string to the other.<br>
+For example, "biting" and "sitting" have an edit distance of 2 (substitute b for s, and insert a t). <br>
+the fist solution is done recursively with a time complexity of O(3^n). There are ways of doing it better like dynamic 
+programming. 
+
