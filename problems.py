@@ -109,6 +109,17 @@ class Solution:
                 t = max
         return t
 
+    def courses_to_take(self, courses):
+        # Needs work and improvement
+        print(courses)
+        arr = []
+        while len(arr) != len(courses):
+            for course in courses:
+                if courses.get(course) == arr:
+                    arr.append(course)
+                    print(arr)
+
+
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
     def __init__(self):
@@ -135,7 +146,6 @@ class MaxStack:
     def max(self):
         print(self.trackStack)
         return self.trackStack[-1]
-
 
 # Driver code: move zeros
 # nums = [0,0,0,0,5,0,1,0,0]
@@ -189,3 +199,11 @@ class MaxStack:
 # Code driver: max subarray sum
 # nums = [-4, -5, -2, 1]
 # print(Solution().max_subarray_sum(nums))
+
+# Code driver: courses to take
+# courses = {
+#  'CSC300': ['CSC100', 'CSC200'],
+#  'CSC200': ['CSC100'],
+#  'CSC100': []
+# }
+# print(Solution().courses_to_take(courses))
