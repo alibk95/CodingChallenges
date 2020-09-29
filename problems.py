@@ -196,7 +196,8 @@ class Solution:
         # So that it becomes easier to work with indexes and swapping the elements
         A1 = list(A)
         B1 = list(B)
-        print(A, B)
+        if len(A) != len(B):
+            return False
         for i in range(len(A1)):
             A1 = list(A)
             for j in range(i+1, len(A1)):

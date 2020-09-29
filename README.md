@@ -91,4 +91,8 @@ the second method is more efficient when it does the following: <br>
 2- Scan the array and compute Minimum and second minimum element present in the array. <br>
 3- Return the maximum of product of Maximum, second maximum and third maximum and product of Minimum, second minimum and Maximum element. <br>
 So all could be done in one single traversal of the array. So the time complexity comes down to O(n) with space of O(1).
-
+## 14- Buddy string
+Given two strings A and B of lowercase letters, return true if and only if we can swap two letters in A so that the result equals B.
+Example 1:
+Input: A = "ab", B = "ba"
+Output: true
