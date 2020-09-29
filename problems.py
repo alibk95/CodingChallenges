@@ -191,6 +191,22 @@ class Solution:
                    max1 * max2 * max3
                    )
 
+    def buddy_string(self, A, B):
+        A1 = list(A)
+        B1 = list(B)
+        print(A, B)
+        for i in range(len(A1)):
+            A1 = list(A)
+            for j in range(i+1, len(A1)):
+                t = A1[i]
+                A1[i] = A1[j]
+                A1[j] = t
+                print(A1, B)
+                if A1 == B1:
+                    return True
+        return False
+
+
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
     def __init__(self):
@@ -287,8 +303,13 @@ class MaxStack:
 # n = len(str2)
 # print(Solution().edit_distance(str1, str2, m, n))
 
-# Code driver:
+# Code driver: maximum product of three elements
 # nums  = [-4, -4, 2, 3]
 # k = 3
 # print(Solution().max_product(nums, k))
 # print(Solution().max_product_improved(nums, k))
+
+# Driver code: Buddy Strings
+A = 'ab'
+B = 'ba'
+print(Solution().buddy_string(A, B))
