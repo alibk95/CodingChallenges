@@ -150,6 +150,47 @@ class Solution:
             self.edit_distance(str1, str2, m-1, n-1)
             )
 
+    def max_product(self, nums, k):
+        res = 1
+        arr = []
+        maximum = 0
+        print(nums)
+        for i,num in enumerate(nums):
+            for j in range(i+1 ,len(nums)):
+                for k in range(j+1, len(nums)):
+                    res = nums[i] * nums[j] * nums[k]
+                    if res > maximum:
+                        maximum = res
+        return maximum
+
+    def max_product_improved(self, nums, k):
+        print(nums)
+        max1 = -1000
+        max2 = -1000
+        max3 = -1000
+        min1 = 1000
+        min2 = 1000
+        for i in range(len(nums)):
+            # finding the 3 largest elemets
+            if nums[i] > max1:
+                max3 = max2
+                max2 = max1
+                max1 = nums[i]
+            elif nums[i] > max2:
+                max3 = max2
+                max2 = nums[i]
+            elif nums[i] > max3:
+                max3 = nums[i]
+            # finding the 2 lowest elements
+            if nums[i] < min1:
+                min2 = min1
+                min1 = nums[i]
+            elif nums[i] < min2:
+                min2 = nums[i]
+        return max(min1 * min2 * max1,
+                   max1 * max2 * max3
+                   )
+
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
     def __init__(self):
@@ -245,3 +286,8 @@ class MaxStack:
 # m = len(str1)
 # n = len(str2)
 # print(Solution().edit_distance(str1, str2, m, n))
+
+# Code driver:
+nums  = [-4, -4, 2, 3]
+k = 3
+print(Solution().max_product_improved(nums, k))
