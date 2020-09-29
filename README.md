@@ -79,4 +79,16 @@ Given two strings, determine the edit distance between them. The edit distance i
 For example, "biting" and "sitting" have an edit distance of 2 (substitute b for s, and insert a t). <br>
 the fist solution is done recursively with a time complexity of O(3^n). There are ways of doing it better like dynamic 
 programming. 
+## 13- Largest product
+You are given an array of integers. Return the largest product that can be made by multiplying any 3 integers in the array.
+
+[-4, -4, 2, 8] should return 128 as the largest product can be made by multiplying -4 * -4 * 8 = 128. <br>
+the first method is the simplest one which does it with 3 for loops and obviously not very efficient with the time
+complexity of O(n^3) and space of O(1). <br>
+
+the second method is more efficient when it does the following: <br>
+1- Scan the array and compute Maximum, second maximum and third maximum element present in the array. <br>
+2- Scan the array and compute Minimum and second minimum element present in the array. <br>
+3- Return the maximum of product of Maximum, second maximum and third maximum and product of Minimum, second minimum and Maximum element. <br>
+So all could be done in one single traversal of the array. So the time complexity comes down to O(n) with space of O(1).
 
