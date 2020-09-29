@@ -192,16 +192,18 @@ class Solution:
                    )
 
     def buddy_string(self, A, B):
+        # Strings in python are immutable which means we can not change the charachters in-place so I changed them to list
+        # So that it becomes easier to work with indexes and swapping the elements
         A1 = list(A)
         B1 = list(B)
         print(A, B)
         for i in range(len(A1)):
             A1 = list(A)
             for j in range(i+1, len(A1)):
+                # t is the helper variable to handle swapping elements of the list
                 t = A1[i]
                 A1[i] = A1[j]
                 A1[j] = t
-                print(A1, B)
                 if A1 == B1:
                     return True
         return False
@@ -310,6 +312,6 @@ class MaxStack:
 # print(Solution().max_product_improved(nums, k))
 
 # Driver code: Buddy Strings
-A = 'ab'
-B = 'ba'
-print(Solution().buddy_string(A, B))
+# A = 'ab'
+# B = 'ba'
+# print(Solution().buddy_string(A, B))
