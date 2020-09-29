@@ -288,6 +288,7 @@ class MaxStack:
 # print(Solution().edit_distance(str1, str2, m, n))
 
 # Code driver:
-nums  = [-4, -4, 2, 3]
-k = 3
-print(Solution().max_product_improved(nums, k))
+# nums  = [-4, -4, 2, 3]
+# k = 3
+# print(Solution().max_product(nums, k))
+# print(Solution().max_product_improved(nums, k))
