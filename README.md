@@ -96,3 +96,13 @@ Given two strings A and B of lowercase letters, return true if and only if we ca
 Example 1:
 Input: A = "ab", B = "ba"
 Output: true
+## 15- Traverse a Grid
+2 integers n and m representing an n by m grid, determine the number of ways you can get from the top-left to the 
+bottom-right of the matrix y going only right or down. <br>
+Example: <br>
+n = 2, m = 2 <br>
+This should return 2, since the only possible routes are: <br>
+Right, down <br>
+Down, right. <br>
+This is done in a recursive method with an exponential time complexity which can be avoided by dynamic programming approach.
+
