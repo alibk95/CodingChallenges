@@ -215,6 +215,14 @@ class Solution:
             return 1
         return self.num_ways(m-1, n) + self.num_ways(m, n-1)
 
+    def find_first_last(self, nums, target):
+        res_arr = []
+        for i, num in enumerate(nums):
+            if num == target:
+                res_arr.append(i)
+        if res_arr == []:
+            return [-1, -1]
+        return [res_arr[0], res_arr[-1]]
 
 
 class MaxStack:
@@ -325,6 +333,11 @@ class MaxStack:
 # print(Solution().buddy_string(A, B))
 
 # Driver code: number of ways
-m = 3
-n = 3
-print(Solution().num_ways(m, n))
+# m = 3
+# n = 3
+# print(Solution().num_ways(m, n))
+
+# Code driver: First and Last Indices of an Element in a Sorted Array
+target = 9
+nums = [1,3,3,5,7,8,9,9,9,15]
+print(Solution().find_first_last(nums, target))
