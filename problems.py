@@ -209,6 +209,13 @@ class Solution:
                     return True
         return False
 
+    def num_ways(self, m, n):
+        # it is doe recursively with an exponential time complexity which can be avoided by dynamic programming approach
+        if m == 1 or n == 1:
+            return 1
+        return self.num_ways(m-1, n) + self.num_ways(m, n-1)
+
+
 
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -316,3 +323,8 @@ class MaxStack:
 # A = 'ab'
 # B = 'ba'
 # print(Solution().buddy_string(A, B))
+
+# Driver code: number of ways
+m = 3
+n = 3
+print(Solution().num_ways(m, n))
