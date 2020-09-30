@@ -338,6 +338,6 @@ class MaxStack:
 # print(Solution().num_ways(m, n))
 
 # Code driver: First and Last Indices of an Element in a Sorted Array
-target = 9
-nums = [1,3,3,5,7,8,9,9,9,15]
-print(Solution().find_first_last(nums, target))
+# target = 9
+# nums = [1,3,3,5,7,8,9,9,9,15]
+# print(Solution().find_first_last(nums, target))
