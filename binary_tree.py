@@ -51,9 +51,23 @@ class BinarySearchTree:
             return cur_height
         left_height = self._height(cur_node.left_child, cur_height + 1)
         right_height = self._height(cur_node.right_child, cur_height + 1)
-
         return max(left_height, right_height)
 
+    def find(self, value):
+        if self.root != None:
+            return self._find(value, self.root)
+        else:
+            return 0
+
+    def _find(self, value, cur_node):
+        if value == cur_node.value:
+            return True
+        elif value > cur_node.value and cur_node.right_child != None:
+            return self._find(value, cur_node.right_child)
+        elif value < cur_node.value and cur_node.left_child != None:
+            return self._find(value, cur_node.left_child)
+        else:
+            return False
 
 tree = BinarySearchTree()
 tree.insert(5)
@@ -67,3 +81,5 @@ tree.insert(20)
 
 tree.print_tree()
 print(tree.height())
+
+print(tree.find(30))
