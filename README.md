@@ -117,3 +117,8 @@ Output: [1,2]
 
 Input: A = [1,2,3,4,5,6,10], target = 9 <br>
 Output: [-1, -1]
+
+# Binary search tree 
+Implement a simple binary search tree. <br>
+This is done in a separate file called binary_tree.py. <br>
+different functions are added to the BinaryTree class such as, insert(), find(), print() and so on. 
