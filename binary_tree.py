@@ -40,11 +40,30 @@ class BinarySearchTree:
             print(cur_node.value)
             self._print_tree(cur_node.right_child)
 
+    def height(self):
+        if self.root != None:
+            return self._height(self.root, 0)
+        else:
+            return 0
+
+    def _height(self, cur_node, cur_height):
+        if cur_node == None:
+            return cur_height
+        left_height = self._height(cur_node.left_child, cur_height + 1)
+        right_height = self._height(cur_node.right_child, cur_height + 1)
+
+        return max(left_height, right_height)
+
+
 tree = BinarySearchTree()
-tree.insert(0)
-tree.insert(9)
-tree.insert(17)
-tree.insert(8)
-tree.insert(2)
 tree.insert(5)
+tree.insert(1)
+tree.insert(3)
+tree.insert(2)
+tree.insert(7)
+tree.insert(10)
+tree.insert(0)
+tree.insert(20)
+
 tree.print_tree()
+print(tree.height())
