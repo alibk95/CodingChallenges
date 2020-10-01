@@ -69,7 +69,9 @@ class BinarySearchTree:
         else:
             return False
 
+# Code driver
 tree = BinarySearchTree()
+# init the binary search tree
 tree.insert(5)
 tree.insert(1)
 tree.insert(3)
@@ -78,8 +80,7 @@ tree.insert(7)
 tree.insert(10)
 tree.insert(0)
 tree.insert(20)
-
+# print the tree
 tree.print_tree()
-print(tree.height())
-
-print(tree.find(30))
+print("The height of the tree is: ",tree.height())
+print("If the value you are looking for exist or not: ", tree.find(30))
