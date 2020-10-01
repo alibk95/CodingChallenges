@@ -224,6 +224,29 @@ class Solution:
             return [-1, -1]
         return [res_arr[0], res_arr[-1]]
 
+    def look_and_say(self, nth):
+        # 1, 11, 21, 1211, ...
+        if nth == 1:
+            return "1"
+        elif nth == 2:
+            return "11"
+
+        s = "11"
+        count = 1
+        for i in range(3, nth+1):
+            s += '$'
+            cnt = 1
+            tmp = ""
+            for j in range(1, len(s)):
+                if s[j-1] != s[j]:
+                    tmp += str(cnt + 0)
+                    tmp += s[j-1]
+                    cnt = 1
+                else:
+                    cnt += 1
+            s = tmp
+        return s
+
 
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -341,3 +364,8 @@ class MaxStack:
 # target = 9
 # nums = [1,3,3,5,7,8,9,9,9,15]
 # print(Solution().find_first_last(nums, target))
+
+# Code driver: Look-and-say sequence
+# nth = 4
+# 1, 11, 21, 1211, 111221, 312211, ...
+# print(Solution().look_and_say(nth))
