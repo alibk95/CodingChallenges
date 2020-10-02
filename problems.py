@@ -247,6 +247,16 @@ class Solution:
             s = tmp
         return s
 
+    # TODO: dynamic programming so that the time comlexity comes down to O(n)
+    def climb_the_stairs(self, n):
+        # The person can reach nth stair from either (n-1)th stair or from (n-2)th stair
+        # So we can write it in recursion
+        # Somehow similar to the fibonacci method
+        # Time complexity of this method: O(2^n)
+        if n <= 2:
+            return n
+        return self.climb_the_stairs(n-1) + self.climb_the_stairs(n-2)
+
 
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -369,3 +379,7 @@ class MaxStack:
 # nth = 4
 # 1, 11, 21, 1211, 111221, 312211, ...
 # print(Solution().look_and_say(nth))
+
+# Code driver: Number of Ways to Climb Stairs
+n = 5
+print(Solution().climb_the_stairs(n))
