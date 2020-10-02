@@ -257,6 +257,14 @@ class Solution:
             return n
         return self.climb_the_stairs(n-1) + self.climb_the_stairs(n-2)
 
+    def reverse(self, string):
+        print(string)
+        rev = str()
+        for i in range(1, len(string)):
+            rev += string[len(string)-i]
+        rev += string[0]
+        return rev
+
 
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -383,3 +391,7 @@ class MaxStack:
 # Code driver: Number of Ways to Climb Stairs
 # n = 5
 # print(Solution().climb_the_stairs(n))
+
+# Driver code: simple reverse
+# string = "ALINegin"
+# print(Solution().reverse(string))
