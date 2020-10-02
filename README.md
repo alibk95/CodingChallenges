@@ -136,3 +136,5 @@ The task is, return the nth term of this sequence.
 You are given a positive integer N which represents the number of steps in a staircase. You can either climb 1 or 2 
 steps at a time. Write a function that returns the number of unique ways to climb the stairs.
 The simplest thing first comes to mind is to use recursive method.
+## 20- Simple reverse of string
+Reverse the string simply without using the builtin python "reverse" function. :  )
