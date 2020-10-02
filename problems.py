@@ -381,5 +381,5 @@ class MaxStack:
 # print(Solution().look_and_say(nth))
 
 # Code driver: Number of Ways to Climb Stairs
-n = 5
-print(Solution().climb_the_stairs(n))
+# n = 5
+# print(Solution().climb_the_stairs(n))
