@@ -132,3 +132,7 @@ obtained by describing the previous term. An example is easier to understand:
 111221 # #one 1, one 2, and two 1's. 
 ```
 The task is, return the nth term of this sequence.
+## 19- Number of Ways to Climb Stairs
+You are given a positive integer N which represents the number of steps in a staircase. You can either climb 1 or 2 
+steps at a time. Write a function that returns the number of unique ways to climb the stairs.
+The simplest thing first comes to mind is to use recursive method.
