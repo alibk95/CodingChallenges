@@ -1,5 +1,6 @@
 # CodingChallenges
-**In order to test each function please take the related driver code out of the comments.** 
+**In order to test each function please take the related driver code out of the comments 
+(Each function is indicated with a number which is also shows the related driver code).** 
 ## 1- moving zeros
 Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.<br>
 Input: [0,1,0,3,12] <br>
