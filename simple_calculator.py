@@ -1,3 +1,4 @@
+# 10
 def precedence(op):
     if op == '+' or op == '-':
         return 1

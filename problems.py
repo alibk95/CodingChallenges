@@ -1,4 +1,5 @@
 class Solution:
+    # 1
     def moveZeros(self, nums):
         # input : [0, 0, 0, 2, 0, 1, 3, 4, 0, 0]
         # output: [2, 1, 3, 4, 0, 0, 0, 0, 0, 0]
@@ -11,6 +12,7 @@ class Solution:
                 t += 1
         return nums
 
+    # 2
     def kth_largest_num(self, nums, k):
         # works with the lists that not have duplications.
         # input: [1,2,3,4,5,6,0,8,9]
@@ -27,6 +29,7 @@ class Solution:
 
         return max, l
 
+    # 3
     def find_single(self, nums):
         # XOR helps to do it very efficient with the space requirement of O(1) and time complexity of O(n)
         # XOR of a number with itself is 0
@@ -37,6 +40,7 @@ class Solution:
             res = res ^ nums[i]
         return res
 
+    # 4
     def two_sum(self, nums, k):
         # [4,7,1,-3,2]
         for i in range(len(nums)):
@@ -46,6 +50,7 @@ class Solution:
                     return True
         return False
 
+    # 4
     def two_sum_2(self, nums, k):
         # More pythonic way of doing it
         for i in range(0, len(nums)):
@@ -53,6 +58,7 @@ class Solution:
                 return True
         return False
 
+    # 5
     def longest_length_substring(self, str):
         longest = 0
         aux = []
@@ -63,6 +69,7 @@ class Solution:
             longest = max(longest, len(aux))
         return longest
 
+    # 7
     def balanced_parenthesis(self, str):
         # [()]{}
         # True
@@ -89,6 +96,7 @@ class Solution:
         else:
             return False
 
+    # 8
     def buy_and_sell(self, nums):
         max = nums[1] - nums[0]
         for i in range(len(nums)):
@@ -97,6 +105,7 @@ class Solution:
                     max = nums[j] - nums[i]
         return max
 
+    # 9
     def max_subarray_sum(self, nums):
         # time complexity of O(n)
         max = 0
@@ -109,6 +118,7 @@ class Solution:
                 t = max
         return t
 
+    # 11
     def courses_to_take(self, courses):
         # Needs work and improvement
         # input is a hashmap or hash table and to access the hash map we have the following ways:
@@ -124,6 +134,7 @@ class Solution:
                     arr.append(course)
                     print(arr)
 
+    # 12
     def edit_distance(self, str1, str2, m, n):
         # A Naive recursive Python program to fin minimum number
         # operations to convert str1 to str2
@@ -150,6 +161,7 @@ class Solution:
             self.edit_distance(str1, str2, m-1, n-1)
             )
 
+    # 13
     def max_product(self, nums, k):
         res = 1
         arr = []
@@ -163,6 +175,7 @@ class Solution:
                         maximum = res
         return maximum
 
+    # 13
     def max_product_improved(self, nums, k):
         print(nums)
         max1 = -1000
@@ -191,6 +204,7 @@ class Solution:
                    max1 * max2 * max3
                    )
 
+    # 14
     def buddy_string(self, A, B):
         # Strings in python are immutable which means we can not change the charachters in-place so I changed them to list
         # So that it becomes easier to work with indexes and swapping the elements
@@ -209,12 +223,14 @@ class Solution:
                     return True
         return False
 
+    # 15
     def num_ways(self, m, n):
-        # it is doe recursively with an exponential time complexity which can be avoided by dynamic programming approach
+        # it is done recursively with an exponential time complexity which can be avoided by dynamic programming approach
         if m == 1 or n == 1:
             return 1
         return self.num_ways(m-1, n) + self.num_ways(m, n-1)
 
+    # 16
     def find_first_last(self, nums, target):
         res_arr = []
         for i, num in enumerate(nums):
@@ -224,6 +240,7 @@ class Solution:
             return [-1, -1]
         return [res_arr[0], res_arr[-1]]
 
+    # 18
     def look_and_say(self, nth):
         # 1, 11, 21, 1211, ...
         if nth == 1:
@@ -248,6 +265,7 @@ class Solution:
         return s
 
     # TODO: dynamic programming so that the time comlexity comes down to O(n)
+    # 19
     def climb_the_stairs(self, n):
         # The person can reach nth stair from either (n-1)th stair or from (n-2)th stair
         # So we can write it in recursion
@@ -257,6 +275,7 @@ class Solution:
             return n
         return self.climb_the_stairs(n-1) + self.climb_the_stairs(n-2)
 
+    # 20
     def reverse(self, string):
         print(string)
         rev = str()
@@ -265,6 +284,7 @@ class Solution:
         rev += string[0]
         return rev
 
+    # 21
     def push_dominoes(self, s: str) -> str:
         l=len(s)
         print(s)
@@ -291,7 +311,7 @@ class Solution:
         return ''.join(arr)
 
 
-
+# 6
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
     def __init__(self):
