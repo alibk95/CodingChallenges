@@ -339,33 +339,33 @@ class MaxStack:
         print(self.trackStack)
         return self.trackStack[-1]
 
-# Driver code: move zeros
+# Driver code 1: move zeros
 # nums = [0,0,0,0,5,0,1,0,0]
 # print(Solution().moveZeros(nums))
 
-# Driver code: kth largest number
+# Driver code 2: kth largest number
 # nums = [1,2,3,4,5,6,0,8,9]
 # k = 3
 # res: 6
 # print(Solution().kth_largest_num(nums, k))
 
-# Driver code: single number
+# Driver code 3: single number
 # nums = [4, 4, 3, 7, 3, 14, 6, 14, 5, 6, 5]
 # print(Solution().find_single(nums))
 
-# Driver code: two sum
+# Driver code 4: two sum
 # nums = [3,2,0,1]
 # k = 5
 # True
 # print(Solution().two_sum(nums, k))
 # print(Solution().two_sum_2(nums, k))
 
-# Driver code: longest substring
+# Driver code 5: longest substring
 # str = 'aacbcddefff'
 # res = 4
 # print(Solution().longest_length_substring(str))
 
-# Driver code: MaxStack
+# Driver code 6: MaxStack
 # s = MaxStack()
 # s.push(1)
 # s.push(0)
@@ -378,21 +378,21 @@ class MaxStack:
 # print(s.max())
 # 4
 
-# Driver code: balanced parenthesis
+# Driver code 7: balanced parenthesis
 # str1 = '(((((((()'
 # str2 = '{}'
 # print(Solution().balanced_parenthesis(str1))
 
-# Driver code: buy and sell
+# Driver code 8: buy and sell
 # nums = [9, 11, 8, 5, 7, 10]
 # res: 5 (10 - 5)
 # print(Solution().buy_and_sell(nums))
 
-# Code driver: max subarray sum
+# Code driver 9: max subarray sum
 # nums = [-4, -5, -2, 1]
 # print(Solution().max_subarray_sum(nums))
 
-# Code driver: courses to take
+# Code driver 11: courses to take
 # courses = {
 #  'CSC300': ['CSC100', 'CSC200'],
 #  'CSC200': ['CSC100'],
@@ -400,7 +400,7 @@ class MaxStack:
 # }
 # print(Solution().courses_to_take(courses))
 
-# Code driver: Edit distance
+# Code driver 12: Edit distance
 # Also in this example using recursive function in a class is shown.
 # str1 = 'biting'
 # str2= 'sitting'
@@ -408,40 +408,40 @@ class MaxStack:
 # n = len(str2)
 # print(Solution().edit_distance(str1, str2, m, n))
 
-# Code driver: maximum product of three elements
+# Code driver 13: maximum product of three elements
 # nums  = [-4, -4, 2, 3]
 # k = 3
 # print(Solution().max_product(nums, k))
 # print(Solution().max_product_improved(nums, k))
 
-# Driver code: Buddy Strings
+# Driver code 14: Buddy Strings
 # A = 'ab'
 # B = 'ba'
 # print(Solution().buddy_string(A, B))
 
-# Driver code: number of ways
+# Driver code 15: number of ways
 # m = 3
 # n = 3
 # print(Solution().num_ways(m, n))
 
-# Code driver: First and Last Indices of an Element in a Sorted Array
+# Code driver 16: First and Last Indices of an Element in a Sorted Array
 # target = 9
 # nums = [1,3,3,5,7,8,9,9,9,15]
 # print(Solution().find_first_last(nums, target))
 
-# Code driver: Look-and-say sequence
+# Code driver 18: Look-and-say sequence
 # nth = 4
 # 1, 11, 21, 1211, 111221, 312211, ...
 # print(Solution().look_and_say(nth))
 
-# Code driver: Number of Ways to Climb Stairs
+# Code driver 19: Number of Ways to Climb Stairs
 # n = 5
 # print(Solution().climb_the_stairs(n))
 
-# Driver code: simple reverse
+# Driver code 20: simple reverse
 # string = "ALINegin"
 # print(Solution().reverse(string))
 
-# Driver code: push dominoes
+# Driver code 21: push dominoes
 # dominoes = '..R...L..R.'
 # print(Solution().push_dominoes(dominoes))
