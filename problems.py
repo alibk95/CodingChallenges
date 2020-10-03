@@ -265,6 +265,32 @@ class Solution:
         rev += string[0]
         return rev
 
+    def push_dominoes(self, s: str) -> str:
+        l=len(s)
+        print(s)
+        # change the strin to array to be able to exchange values in the array
+        arr=[s[i] for i in range(l)]
+        # an array that helps to keep track of the changes
+        check=[0 for i in range(l)]
+        # traverse the array from left to right to check for R's
+        for i in range(1,l):
+            if arr[i-1]=='R':
+                if arr[i]=='.':
+                    arr[i]='R'
+                    # mark in the check array to be able to handle the R.L situations
+                    check[i] = 1
+        # traverse the array from the end to check for L's
+        for i in range(l-2,-1,-1):
+            if arr[i+1]=='L':
+                if arr[i]=='.':
+                    arr[i]='L'
+                elif arr[i]=='R' and s[i]=='.' and check[i] != 1:
+                    arr[i]='L'
+                else:
+                    arr[i] = '.'
+        return ''.join(arr)
+
+
 
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -395,3 +421,7 @@ class MaxStack:
 # Driver code: simple reverse
 # string = "ALINegin"
 # print(Solution().reverse(string))
+
+# Driver code: push dominoes
+# dominoes = '..R...L..R.'
+# print(Solution().push_dominoes(dominoes))
