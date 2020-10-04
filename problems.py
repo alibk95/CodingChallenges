@@ -310,6 +310,7 @@ class Solution:
                     arr[i] = '.'
         return ''.join(arr)
 
+    # TODO: Better way to do it in O(n^2) needs to be implemented
     # 22
     def find_pythagorean(self, nums):
         # Naive way to solve the problem is to just do it with three loops with the time complexity of O(n^3).
@@ -323,6 +324,18 @@ class Solution:
                         return True
         return False
 
+    def fizzbuzz(self, n):
+        r = str()
+        for i in range(1,n+1):
+            if i >= 5 and i % 3 == 0 and i % 5 == 0:
+                r += 'FizzBuzz'
+            elif i >= 3 and i % 3 == 0:
+                r += 'Fizz'
+            elif i >= 5 and i % 5 == 0:
+                r += 'Buzz'
+            else:
+                r += str(i)
+        return r
 # 6
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -459,5 +472,9 @@ class MaxStack:
 # print(Solution().push_dominoes(dominoes))
 
 # Driver code 22: Find Pythagorean Triplets
-nums = [7, 33, 56, 65]
-print(Solution().find_pythagorean(nums))
+# nums = [7, 33, 56, 65]
+# print(Solution().find_pythagorean(nums))
+
+# Driver code 23: FizZBuzZ
+# n = 15
+# print(Solution().fizzbuzz(n))
