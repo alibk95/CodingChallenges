@@ -154,3 +154,8 @@ Example: <br>
 Input:  ..R...L..R.
 Output: ..RR.LL..RR
 ```
+## 22- Find Pythagorean Triplets
+Given a list of numbers, find if there exists a pythagorean triplet in that list. A pythagorean triplet is 3 variables
+a, b, c where a2 + b2 = c2 <br>
+Input: [3, 5, 12, 5, 13] <br>
+Output: True <br>

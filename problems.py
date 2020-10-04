@@ -310,6 +310,7 @@ class Solution:
                     arr[i] = '.'
         return ''.join(arr)
 
+    # 22
     def find_pythagorean(self, nums):
         # Naive way to solve the problem is to just do it with three loops with the time complexity of O(n^3).
         for i in range(len(nums)):
@@ -457,6 +458,6 @@ class MaxStack:
 # dominoes = '..R...L..R.'
 # print(Solution().push_dominoes(dominoes))
 
-# Driver code: Find Pythagorean Triplets
+# Driver code 22: Find Pythagorean Triplets
 nums = [7, 33, 56, 65]
 print(Solution().find_pythagorean(nums))
