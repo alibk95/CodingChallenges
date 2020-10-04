@@ -324,6 +324,7 @@ class Solution:
                         return True
         return False
 
+    # 23
     def fizzbuzz(self, n):
         r = str()
         for i in range(1,n+1):
