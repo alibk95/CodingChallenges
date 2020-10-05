@@ -355,6 +355,27 @@ class Solution:
                 first = mid + 1
         return False
 
+    def reverse_alphabets(self, S):
+        if not S:
+            return S
+        str_ = ""
+        index1 = 0
+        index2 = len(S) - 1
+        while index1 < len(S):
+
+            if index2 >= 0 and S[index1].isalpha() and S[index2].isalpha():
+                str_ += S[index2]
+                index2 -= 1
+                index1 += 1
+            elif S[index1].isalpha():
+                index2 -= 1
+            elif not S[index1].isalpha():
+                str_ += S[index1]
+                index1 += 1
+            else:
+                index2 -= 1
+                index1 += 1
+        return str_
 
 # 6
 class MaxStack:
@@ -503,3 +524,8 @@ class MaxStack:
 # n = 74
 # nums = [1, 4, 7, 20, 25, 56, 74, 87]
 # print(Solution().binary_search(nums, n))
+
+# Driver code 27: reverse alphabets
+# string = 'sea!$hells3'
+# sll!$ehaes3
+# print(Solution().reverse_alphabets(string))
