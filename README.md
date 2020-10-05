@@ -175,3 +175,9 @@ As such, fizzBuzz(15) would result in '12fizz4buzzfizz78fizzbuzz11fizz1314fizzbu
 Typical interview question.
 Given a sorted (in ascending order) integer array nums of n elements and a target value, write a function to search 
 target in nums. If target exists, then return True and its index, otherwise return False.
+## 25- Bin packing
+For better explanation, refer [here](https://en.wikipedia.org/wiki/Bin_packing_problem)!
+Given n items of different weights and bins each of capacity c, assign each item to a bin such that number of total used
+bins is minimized. It may be assumed that all items have weights smaller than bin capacity.
+## 26- Knapsack 
+For better explanation, refer [here](https://en.wikipedia.org/wiki/Knapsack_problem)!

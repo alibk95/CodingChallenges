@@ -1,3 +1,4 @@
+# 25
 class Bpp:
     # Bin Pack Problem (BPP)
     def __init__(self):
