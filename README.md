@@ -181,3 +181,6 @@ Given n items of different weights and bins each of capacity c, assign each item
 bins is minimized. It may be assumed that all items have weights smaller than bin capacity.
 ## 26- Knapsack 
 For better explanation, refer [here](https://en.wikipedia.org/wiki/Knapsack_problem)!
+## 27- Reverse Alphabet only
+You are given a string that contains alphabetical characters (a - z, A - Z) and some other characters ($, !, etc.). For 
+example, one input may be: 'sea!$hells3' and the result should be: 'sll!$ehaes3'
