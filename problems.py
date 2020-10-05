@@ -338,7 +338,7 @@ class Solution:
                 r += str(i)
         return r
 
-    # 23
+    # 24
     def binary_search(self, nums: list, n: int) -> (str,int):
         first, last = 0, len(nums) - 1
         while first <= last:
