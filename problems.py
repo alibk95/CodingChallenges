@@ -337,6 +337,25 @@ class Solution:
             else:
                 r += str(i)
         return r
+
+    # 23
+    def binary_search(self, nums: list, n: int) -> (str,int):
+        first, last = 0, len(nums) - 1
+        while first <= last:
+            mid = (first + last) // 2
+            if n == nums[first]:
+                return True, first
+            elif n == nums[mid]:
+                return True, mid
+            elif n == nums[last]:
+                return True, last
+            elif nums[first] < n <= nums[mid]:
+                last = mid - 1
+            else:
+                first = mid + 1
+        return False
+
+
 # 6
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -479,3 +498,8 @@ class MaxStack:
 # Driver code 23: FizZBuzZ
 # n = 15
 # print(Solution().fizzbuzz(n))
+
+# Driver code 24: binary search
+# n = 74
+# nums = [1, 4, 7, 20, 25, 56, 74, 87]
+# print(Solution().binary_search(nums, n))
