@@ -378,6 +378,24 @@ class Solution:
                 index1 += 1
         return str_
 
+    # 28
+    def is_anagram(self, str1, str2):
+        # of course many other ways to solve this problem
+        # but I used mapping in python just to remind it and see basically how it functions.
+        if str1 == str2:
+            return False
+        else:
+            str1 = list(str1.lower())
+            str2 = list(str2.lower())
+            str1_map = {x: str1.count(x) for x in str1}
+            str2_map = {y: str2.count(y) for y in str2}
+            print(str1_map)
+            print(str2_map)
+            if str1_map == str2_map:
+                return True
+            else:
+                return False
+
 # 6
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -530,3 +548,8 @@ class MaxStack:
 # string = 'sea!$hells3'
 # sll!$ehaes3
 # print(Solution().reverse_alphabets(string))
+
+# Driver code 28: Is Anagram
+# str1 = 'cinema'
+# str2 = 'iceman'
+# print(Solution().is_anagram(str1, str2))
