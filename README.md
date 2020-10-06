@@ -184,3 +184,9 @@ For better explanation, refer [here](https://en.wikipedia.org/wiki/Knapsack_prob
 ## 27- Reverse Alphabet only
 You are given a string that contains alphabetical characters (a - z, A - Z) and some other characters ($, !, etc.). For 
 example, one input may be: 'sea!$hells3' and the result should be: 'sll!$ehaes3'
+## 28- Is anagram
+Here's the definition of an anagram: a word, phrase, or name formed by rearranging the letters of another: such as cinema, 
+formed from iceman.
+
+We are given two strings like "cinema" and "iceman" as inputs. Can you write a method isAnagram(str1, str2) that will 
+return true or false depending on whether the strings are anagrams of each other?
