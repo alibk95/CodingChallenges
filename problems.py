@@ -264,7 +264,6 @@ class Solution:
             s = tmp
         return s
 
-    # TODO: dynamic programming so that the time comlexity comes down to O(n)
     # 19
     def climb_the_stairs(self, n):
         # The person can reach nth stair from either (n-1)th stair or from (n-2)th stair
@@ -274,6 +273,17 @@ class Solution:
         if n <= 2:
             return n
         return self.climb_the_stairs(n-1) + self.climb_the_stairs(n-2)
+
+    # 19
+    def climb_the_stairs_dynamic(self, n):
+        # Dynamic programming
+        # instead of having an exponential time complexity of recursion we achieve the linearO(n)
+        # We already know that if the number of stairs is 0 then we have 0 options and so on with 1 and 2
+        # So we can build our starting point like following array
+        f = [0, 1, 2]
+        for i in range(3, n+1):
+            f.append(f[i-1] + f[i-2])
+        return f[n]
 
     # 20
     def reverse(self, string):
@@ -520,8 +530,9 @@ class MaxStack:
 # print(Solution().look_and_say(nth))
 
 # Code driver 19: Number of Ways to Climb Stairs
-# n = 5
+n = 5
 # print(Solution().climb_the_stairs(n))
+# print(Solution().climb_the_stairs_dynamic(n))
 
 # Driver code 20: simple reverse
 # string = "ALINegin"
