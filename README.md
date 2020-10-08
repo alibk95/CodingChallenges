@@ -193,3 +193,13 @@ return true or false depending on whether the strings are anagrams of each other
 ## 29- Majority
 Could you find the majority element? A majority is defined as "the greater part, or more than half, of the total. It is 
 a subset of a set consisting of more than half of the set's elements."
+## 30- Sort colors
+Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are 
+adjacent, with the colors in the order red, white and blue.
+
+Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively. <br>
+Note: You are not suppose to use the library’s sort function for this problem. <br>
+```
+Input: [2,0,2,1,1,0]
+Output: [0,0,1,1,2,2]
+```
