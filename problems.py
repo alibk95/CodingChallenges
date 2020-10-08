@@ -406,6 +406,21 @@ class Solution:
             else:
                 return False
 
+    # 29
+    def majority(self, nums):
+        # using hash map makes it easy
+        # of course several other solutions is appliable for this problem
+        print(nums)
+        nums_map = {x: nums.count(x) for x in nums}
+        max = 0
+        print(nums_map)
+        for key in nums_map.keys():
+            if nums_map[key] > max:
+                max = nums_map[key]
+        if max > len(nums) // 2:
+            return True
+        return False
+
 # 6
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -530,7 +545,7 @@ class MaxStack:
 # print(Solution().look_and_say(nth))
 
 # Code driver 19: Number of Ways to Climb Stairs
-n = 5
+# n = 5
 # print(Solution().climb_the_stairs(n))
 # print(Solution().climb_the_stairs_dynamic(n))
 
@@ -564,3 +579,7 @@ n = 5
 # str1 = 'cinema'
 # str2 = 'iceman'
 # print(Solution().is_anagram(str1, str2))
+
+# Driver code 29: majority
+nums = [4, 2, 4]
+print(Solution().majority(nums))
