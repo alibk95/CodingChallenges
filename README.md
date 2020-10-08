@@ -190,3 +190,6 @@ formed from iceman.
 
 We are given two strings like "cinema" and "iceman" as inputs. Can you write a method isAnagram(str1, str2) that will 
 return true or false depending on whether the strings are anagrams of each other?
+## 29- Majority
+Could you find the majority element? A majority is defined as "the greater part, or more than half, of the total. It is 
+a subset of a set consisting of more than half of the set's elements."
