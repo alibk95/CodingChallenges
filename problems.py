@@ -421,6 +421,22 @@ class Solution:
             return True
         return False
 
+    # 30
+    def sort_colors(self, colors):
+        print(colors)
+        white, red, blue = [], [], []
+        for i, cl in enumerate(colors):
+            if cl == 0:
+                white.append(cl)
+            elif cl == 1:
+                red.append(cl)
+            elif cl == 2:
+                blue.append(cl)
+            else:
+                return False
+        colors = white + red + blue
+        print(colors)
+
 # 6
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -581,5 +597,9 @@ class MaxStack:
 # print(Solution().is_anagram(str1, str2))
 
 # Driver code 29: majority
-nums = [4, 2, 4]
-print(Solution().majority(nums))
+# nums = [4, 2, 4]
+# print(Solution().majority(nums))
+
+# Driver code 30: Sort colors
+# colors = [0, 1, 2, 2, 1, 1, 2, 2, 0, 0, 0, 0, 2, 1]
+# print(Solution().sort_colors(colors))
