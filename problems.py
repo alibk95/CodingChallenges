@@ -437,6 +437,14 @@ class Solution:
         colors = white + red + blue
         print(colors)
 
+    # 31
+    def power3(self, n):
+        while n > 1:
+            n = n / 3
+        if n == 1:
+            return True
+        return False
+
 # 6
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -603,3 +611,7 @@ class MaxStack:
 # Driver code 30: Sort colors
 # colors = [0, 1, 2, 2, 1, 1, 2, 2, 0, 0, 0, 0, 2, 1]
 # print(Solution().sort_colors(colors))
+
+# Driver code 31: Power3
+# n = 81
+# print(Solution().power3(n))
