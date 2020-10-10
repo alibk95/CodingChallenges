@@ -445,6 +445,30 @@ class Solution:
             return True
         return False
 
+    # 32
+    def three_sum(self, nums):
+        # The naive algorithm is just go through the list in 3 for loops
+        # So the time complexity is obviously O(n^3)
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                for t in range(j+1, len(nums)):
+                    if nums[i] + nums[j] + nums[t] == 0:
+                        print(nums[i], nums[j], nums[t])
+
+    # 33
+    def three_sum_eff(self, nums):
+        # A bit more wiser idea is that to use a mapping system.
+        # Which brings the time complexity down to O(n^2)
+        print(nums)
+        for i in range(len(nums)):
+            s = set()
+            for j in range(i+1, len(nums)):
+                x = -(nums[i] + nums[j])
+                if x in s:
+                    print("Found with: ", x, nums[i], nums[j])
+                else:
+                    s.add(nums[j])
+
 # 6
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -615,3 +639,8 @@ class MaxStack:
 # Driver code 31: Power3
 # n = 81
 # print(Solution().power3(n))
+
+# Driver code 32: 3Sum
+# nums = [0, -1, 2, -3, 1]
+# print(Solution().three_sum(nums))
+# print(Solution().three_sum_eff(nums))
