@@ -205,3 +205,12 @@ Output: [0,0,1,1,2,2]
 ```
 ## 31- Power of three
 If the given number is power of three.
+## 32- Three Sum
+Given an array, nums, of n integers, find all unique triplets (three numbers, a, b, & c) in nums such that a + b + c = 0. 
+Note that there may not be any triplets that sum to zero in nums, and that the triplets must not be duplicates.
+```
+Input: nums = [0, -1, 2, -3, 1]
+Output: [0, -1, 1], [2, -3, 1]
+```
+Here the naive way is the three for loops but also a wiser way could be to use a mapping system in order to look for 
+the negation of two sums and if it exists it means that the sum is equal to zero. 
