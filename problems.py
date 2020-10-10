@@ -455,13 +455,15 @@ class Solution:
                     if nums[i] + nums[j] + nums[t] == 0:
                         print(nums[i], nums[j], nums[t])
 
-    # 33
+    # 32
     def three_sum_eff(self, nums):
         # A bit more wiser idea is that to use a mapping system.
         # Which brings the time complexity down to O(n^2)
         print(nums)
         for i in range(len(nums)):
             s = set()
+            # Here we check whether there is any element that is the negation of sum of two other elements
+            # Which means that if we sum those three elements it gives us zero.
             for j in range(i+1, len(nums)):
                 x = -(nums[i] + nums[j])
                 if x in s:
