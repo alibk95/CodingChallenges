@@ -507,6 +507,15 @@ class Solution:
             return -1
         return nums[min(m)]
 
+    # 34
+    def first_duplicate_eff(self, nums):
+        mySet = set()
+        for el in nums:
+            if el in mySet:
+                return el
+            mySet.add(el)
+        return -1
+
 # 6
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -689,5 +698,6 @@ class MaxStack:
 # print(Solution().sum_digits_eff(n))
 
 # Driver code 34: First duplicate
-# nums = [2, 1, 3, 5, 3, 2]
-# print(Solution().first_duplicate(nums))
+nums = [2, 1, 3, 5, 3, 2]
+print(Solution().first_duplicate(nums))
+print(Solution().first_duplicate_eff(nums))
