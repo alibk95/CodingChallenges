@@ -493,6 +493,20 @@ class Solution:
         else:
             return n % 9
 
+    # 34
+    def first_duplicate(self, nums):
+        print(nums)
+        m = []
+        if len(nums) == 0:
+            return -1
+        for i in range(len(nums)):
+            for k in range(i+1, len(nums)):
+                if nums[i] == nums[k]:
+                    m.append(k)
+        if len(m) == 0:
+            return -1
+        return nums[min(m)]
+
 # 6
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -669,7 +683,11 @@ class MaxStack:
 # print(Solution().three_sum(nums))
 # print(Solution().three_sum_eff(nums))
 
-# Driver code 32: Sum Digits Until One
-n = 987
-print(Solution().sum_digits(n))
-print(Solution().sum_digits_eff(n))
+# Driver code 33: Sum Digits Until One
+# n = 987
+# print(Solution().sum_digits(n))
+# print(Solution().sum_digits_eff(n))
+
+# Driver code 34: First duplicate
+# nums = [2, 1, 3, 5, 3, 2]
+# print(Solution().first_duplicate(nums))
