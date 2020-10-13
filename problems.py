@@ -471,6 +471,18 @@ class Solution:
                 else:
                     s.add(nums[j])
 
+    # 33
+    def sum_digits(self, n):
+        # Easy way is to use brute force and sum all the digits till it gets less than 10.
+        sum = 0
+        while n > 0 or sum > 9:
+            if n == 0:
+                n = sum
+                sum = 0
+            sum += n % 10
+            n //= 10
+        return sum
+
 # 6
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -646,3 +658,7 @@ class MaxStack:
 # nums = [0, -1, 2, -3, 1]
 # print(Solution().three_sum(nums))
 # print(Solution().three_sum_eff(nums))
+
+# Driver code 32: Sum Digits Until One
+n = 987
+print(Solution().sum_digits(n))
