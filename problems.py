@@ -483,6 +483,16 @@ class Solution:
             n //= 10
         return sum
 
+    # 33_eff
+    def sum_digits_eff(self, n):
+        # This can be also done in a time of O(1).
+        if n == 0:
+            return 0
+        elif n % 9 == 0:
+            return 9
+        else:
+            return n % 9
+
 # 6
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -662,3 +672,4 @@ class MaxStack:
 # Driver code 32: Sum Digits Until One
 n = 987
 print(Solution().sum_digits(n))
+print(Solution().sum_digits_eff(n))
