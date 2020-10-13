@@ -214,3 +214,16 @@ Output: [0, -1, 1], [2, -3, 1]
 ```
 Here the naive way is the three for loops but also a wiser way could be to use a mapping system in order to look for 
 the negation of two sums and if it exists it means that the sum is equal to zero. 
+## 33- Sum digits
+We're provided a positive integer num. Can you write a method to repeatedly add all of its digits until the result has 
+only one digit?<br>
+Here's an example: if the input was 49, we'd go through the following steps: <br>
+```
+// start with 49
+4 + 9 = 13
+
+// move onto 13
+1 + 3 = 4
+```
+We would then return 4. <br>
+There's two solutions provided for this problem don't forget to check out on the efficient one. 
