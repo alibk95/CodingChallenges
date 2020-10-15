@@ -53,17 +53,29 @@ class LinkedList:
                 curr = curr.get_next()
         return False
 
+    def reverse(self):
+        curr = self.head
+        prev = None
+        while curr:
+            next = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next
+        self.head = prev
+
     def print(self):
         node = self.head
         while node:
-            print(node.get_data())
-            node = node.get_next()
+            print(node.data)
+            node = node.next
 
 
 mylist = LinkedList()
 mylist.add_node(5)
 mylist.add_node(15)
 mylist.add_node(25)
-print(mylist.find_node(1))
 mylist.print()
+mylist.reverse()
+mylist.print()
+
 
