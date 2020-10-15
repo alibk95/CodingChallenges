@@ -44,6 +44,15 @@ class LinkedList:
             curr = curr.get_next()
         return False
 
+    def find_node(self, value):
+        curr = self.head
+        while curr:
+            if curr.get_data() == value:
+                return True
+            else:
+                curr = curr.get_next()
+        return False
+
     def print(self):
         node = self.head
         while node:
@@ -55,6 +64,6 @@ mylist = LinkedList()
 mylist.add_node(5)
 mylist.add_node(15)
 mylist.add_node(25)
-mylist.delete_node(25)
+print(mylist.find_node(1))
 mylist.print()
 
