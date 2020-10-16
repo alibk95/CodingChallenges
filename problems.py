@@ -516,6 +516,20 @@ class Solution:
             mySet.add(el)
         return -1
 
+    # 35
+    def median(self, nums):
+        nums2 = []
+        med = []
+        for num in nums:
+            nums2.append(num)
+            mid = len(nums2) // 2
+            if len(nums2) % 2:
+                med.append(sorted(nums2)[mid])
+            else:
+                med.append(sum(sorted(nums2)[mid-1:mid+1]) / 2)
+        return med
+
+
 # 6
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -701,3 +715,7 @@ class MaxStack:
 # nums = [2, 1, 3, 5, 3, 2]
 # print(Solution().first_duplicate(nums))
 # print(Solution().first_duplicate_eff(nums))
+
+# Driver code 35: Median
+nums = [2, 1, 4, 7, 2, 0, 5]
+print(Solution().median(nums))
