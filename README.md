@@ -237,3 +237,6 @@ For a = [2, 1, 3, 5, 3, 2], the output should be 3. There are 2 duplicates: numb
 has a smaller index than the second occurrence of 2 does, so the answer is 3.
 
 This problem implemented with two different approaches.
+## 35- Running Median
+You are given a stream of numbers. Compute the median for each new element. <br>
+Eg. Given [2, 1, 4, 7, 2, 0, 5], the algorithm should output [2, 1.5, 2, 3.0, 2, 2, 2]
