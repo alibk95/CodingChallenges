@@ -529,6 +529,21 @@ class Solution:
                 med.append(sum(sorted(nums2)[mid-1:mid+1]) / 2)
         return med
 
+    # 36
+    def domain_type(self, domains):
+        print(domains)
+        # .com, .org, .net, .info  / "commercial", "organization", "network" , "information"
+        for dom in domains:
+            if dom[-4:] == '.com':
+                print(dom + ' is ' + "commercial")
+            elif dom[-4:] == '.org' in dom:
+                print(dom + ' is ' + "organization")
+            elif dom[-4:] == '.net' in dom:
+                print(dom + ' is ' + "network")
+            elif dom[-5:] == '.info' in dom:
+                print(dom + ' is ' + "information")
+            else:
+                print("Not valid domain!")
 
 # 6
 class MaxStack:
@@ -717,5 +732,19 @@ class MaxStack:
 # print(Solution().first_duplicate_eff(nums))
 
 # Driver code 35: Median
-nums = [2, 1, 4, 7, 2, 0, 5]
-print(Solution().median(nums))
+# nums = [2, 1, 4, 7, 2, 0, 5]
+# print(Solution().median(nums))
+
+# Driver code 36: Domain type
+# domains = ["en.wiki.org", "codesignal.com", "happy.net", "code.info"]
+# domains = ["com.net.info",
+# "org.com.net",
+# "net.com.org",
+# "info.net.com",
+# "net.net.com",
+# "com.com.org",
+# "info.info.net",
+# "org.org.info"]
+# print(Solution().domain_type(domains))
+
+
