@@ -772,12 +772,12 @@ class MaxStack:
 # print(Solution().domain_type(domains))
 
 # Driver code 37: Find ranges
-nums = [0, 1, 2, 5, 7, 8, 9, 9, 10, 11, 15]
-print(Solution().find_ranges(nums))
+# nums = [0, 1, 2, 5, 7, 8, 9, 9, 10, 11, 15]
+# print(Solution().find_ranges(nums))
 # output: ['0->2', '5->5', '7->11', '15->15']
 
 # Driver code 38: Product of Array Except Self
-nums = [1, 2, 3, 4, 5]
-print(Solution().product_array_except_self(nums))
+# nums = [1, 2, 3, 4, 5]
+# print(Solution().product_array_except_self(nums))
 
 
