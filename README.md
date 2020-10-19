@@ -247,3 +247,14 @@ available domains, GoDaddy is introducing a new feature that shows the type of t
 implement this feature.
 To begin with, you want to write a function that labels the domains as "commercial", "organization", "network" or 
 "information" for .com, .org, .net or .info respectively. For the given list of domains return the list of their labels.
+## 37- Find ranges
+Given a sorted list of numbers, return a list of strings that represent all of the consecutive numbers.
+```
+Input: [0, 1, 2, 5, 7, 8, 9, 9, 10, 11, 15]
+Output: ['0->2', '5->5', '7->11', '15->15']
+```
+## 38- Product of Array Except Self
+You are given an array of integers. Return an array of the same size where the element at each index is the product of 
+all the elements in the original array except for the element at that index.
+For example, an input of [1, 2, 3, 4, 5] should return [120, 60, 40, 30, 24]. 
+You cannot use division in this problem.
