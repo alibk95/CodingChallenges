@@ -545,6 +545,30 @@ class Solution:
             else:
                 print("Not valid domain!")
 
+    # 37
+    def find_ranges(self, nums):
+        # input: [0, 1, 2, 5, 7, 8, 9, 9, 10, 11, 15]
+        # expected output: ['0->2', '5->5', '7->11', '15->15']
+        return True
+
+    # 38
+    def product_array_except_self(self, nums):
+        res = []
+        # p keeps the product results
+        p = 1
+        for i in range(len(nums)):
+            # b helps to store the value of the corresponding item that we change it to 1
+            b = nums[i]
+            nums[i] = 1
+            for j in range(len(nums)):
+                p *= nums[j]
+            res.append(p)
+            p = 1
+            # Here we give back the real value to the list item
+            nums[i] = b
+        return res
+
+
 # 6
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -746,5 +770,14 @@ class MaxStack:
 # "info.info.net",
 # "org.org.info"]
 # print(Solution().domain_type(domains))
+
+# Driver code 37: Find ranges
+nums = [0, 1, 2, 5, 7, 8, 9, 9, 10, 11, 15]
+print(Solution().find_ranges(nums))
+# output: ['0->2', '5->5', '7->11', '15->15']
+
+# Driver code 38: Product of Array Except Self
+nums = [1, 2, 3, 4, 5]
+print(Solution().product_array_except_self(nums))
 
 
