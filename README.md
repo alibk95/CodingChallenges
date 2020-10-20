@@ -263,3 +263,10 @@ Find the length of maximum number of consecutive numbers jumbled up in an array.
 The idea is to use hashing. We traverse through the array and for every element, we check if it is the starting element 
 of its sequence. If yes then by incrementing its value we search the set and increment the length. By repeating this for
 all elements, we can find the lengths of all consecutive sets in array. Finally we return length of the largest set.
+## 39- Intersection
+Given two arrays, write a function to compute their intersection - the intersection means the numbers that are in both 
+arrays.
+```
+Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+Output: [9,4]
+```
