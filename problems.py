@@ -568,6 +568,22 @@ class Solution:
             nums[i] = b
         return res
 
+    # 39
+    def find_longest_conseq_subseq(self, nums):
+        # I inserted all the array elements into unordered set so that any duplicates are avoided
+        s = set()
+        ans = 0
+        for i in range(len(nums)):
+            s.add(nums[i])
+        for i in range(len(nums)):
+            t = 0
+            b = nums[i]
+            # increment the value of array element and repeat search in the set
+            while s.__contains__(b):
+                b += 1
+                t += 1
+            ans = max(ans, t)
+        print(ans)
 
 # 6
 class MaxStack:
@@ -780,4 +796,9 @@ class MaxStack:
 # nums = [1, 2, 3, 4, 5]
 # print(Solution().product_array_except_self(nums))
 
+# Driver code 39: Maximum consecutive numbers present in an array
+# nums = [1, 94, 93, 1000, 5, 92, 78]
+# nums2 = [1, 5, 92, 4, 78, 6, 7]
+# print(Solution().find_longest_conseq_subseq(nums))
+# print(Solution().find_longest_conseq_subseq(nums2))
 
