@@ -258,3 +258,8 @@ You are given an array of integers. Return an array of the same size where the e
 all the elements in the original array except for the element at that index.
 For example, an input of [1, 2, 3, 4, 5] should return [120, 60, 40, 30, 24]. 
 You cannot use division in this problem.
+## 39- Maximum consecutive numbers present in an array
+Find the length of maximum number of consecutive numbers jumbled up in an array.
+The idea is to use hashing. We traverse through the array and for every element, we check if it is the starting element 
+of its sequence. If yes then by incrementing its value we search the set and increment the length. By repeating this for
+all elements, we can find the lengths of all consecutive sets in array. Finally we return length of the largest set.
