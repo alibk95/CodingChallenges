@@ -585,6 +585,20 @@ class Solution:
             ans = max(ans, t)
         print(ans)
 
+    # 40
+    def intersection(self, nums1, nums2):
+        print(nums1, nums2)
+        # define a set to avoid finding duplications
+        s = set()
+        for n1 in nums1:
+            for n2 in nums2:
+                if n1 == n2:
+                    s.add(n1)
+        # convert the set to list cause the expected result must be stored in a list
+        s = list(s)
+        return s
+
+
 # 6
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -801,4 +815,9 @@ class MaxStack:
 # nums2 = [1, 5, 92, 4, 78, 6, 7]
 # print(Solution().find_longest_conseq_subseq(nums))
 # print(Solution().find_longest_conseq_subseq(nums2))
+
+# Driver code 40: intersection
+# nums1 = [4,9,5]
+# nums2 = [9,4,9,8,4]
+# print(Solution().intersection(nums1, nums2))
 
