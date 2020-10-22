@@ -598,6 +598,16 @@ class Solution:
         s = list(s)
         return s
 
+    # 41
+    def clock_angle(self, h, m):
+        print(h, m)
+        h_ = h*5
+        t = m - h_
+        if t < 0:
+            t = 0 - t
+        t_ = t * 6
+        res = t_ - (m/60)*30
+        return res
 
 # 6
 class MaxStack:
@@ -821,3 +831,7 @@ class MaxStack:
 # nums2 = [9,4,9,8,4]
 # print(Solution().intersection(nums1, nums2))
 
+# Driver code 41: Clock angles
+# h = 9
+# m = 3
+# print(Solution().clock_angle(h,m))
