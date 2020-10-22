@@ -270,3 +270,5 @@ arrays.
 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
 Output: [9,4]
 ```
+## 40- Clock Angles
+Given a time in the format of hour and minute, calculate the angle of the hour and minute hand on a clock.
