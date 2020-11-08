@@ -609,6 +609,34 @@ class Solution:
         res = t_ - (m/60)*30
         return res
 
+    # 42
+    def roman_to_int(self, str_):
+        alphabet = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+        res = 0
+        i = 0
+        while i < len(str_):
+            # Getting value of symbol str_[i]
+            s1 = alphabet[str_[i]]
+            if i + 1 < len(str_):
+                # Getting value of symbol str_[i + 1]
+                s2 = alphabet[str_[i + 1]]
+                # Comparing both values
+                if s1 >= s2:
+                    # Value of current symbol is greater
+                    # or equal to the next symbol
+                    res = res + s1
+                    i = i + 1
+                else:
+                    # Value of current symbol is less than
+                    # or equal to the next symbol
+                    res = res + s2 - s1
+                    i = i + 2
+            else:
+                res = res + s1
+                i = i + 1
+        return res
+
+
 # 6
 class MaxStack:
     # simple stack with max functionality. max function has the time complextity of O(1).
@@ -835,3 +863,7 @@ class MaxStack:
 # h = 9
 # m = 3
 # print(Solution().clock_angle(h,m))
+
+# Driver code 42: Roman Numerics
+str_ = 'MCMXIIV'
+print(Solution().roman_to_int(str_))
