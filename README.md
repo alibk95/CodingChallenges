@@ -297,4 +297,11 @@ The rules are as follows:
 1. I placed before V or X is one less, so 4 = IV (one less than 5), and 9 is IX (one less than 10)
 2. X placed before L or C indicates ten less, so 40 is XL (10 less than 50) and 90 is XC (10 less than 100).
 3. C placed before D or M indicates 100 less, so 400 is CD (100 less than 500), and 900 is CM (100 less than 1000).
+## 43- Compress String
+Given an array of characters with repeats, compress it in place. The length after compression should be less than or 
+equal to the original array.
+```
+Input: ['a', 'a', 'b', 'c', 'c', 'c']
+Output: ['a', '2', 'b', 'c', '3']
+```
 
