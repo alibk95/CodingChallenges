@@ -636,6 +636,22 @@ class Solution:
                 i = i + 1
         return res
 
+    # 43
+    def compress(self, l):
+        str_ = []
+        x_ = None
+        for x in l:
+            if x != x_:
+                r = l.count(x)
+                if r == 1:
+                    str_.append(x)
+                else:
+                    str_.append(x)
+                    str_.append(r)
+            x_ = x
+        return str_
+
+
 
 # 6
 class MaxStack:
@@ -867,3 +883,7 @@ class MaxStack:
 # Driver code 42: Roman Numerics
 # str_ = 'MCMXIIV'
 # print(Solution().roman_to_int(str_))
+
+# Driver code 43: Compress String
+l = ['a', 'a', 'b', 'c', 'c', 'c']
+print(Solution().compress(l))
