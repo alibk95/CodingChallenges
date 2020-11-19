@@ -304,4 +304,5 @@ equal to the original array.
 Input: ['a', 'a', 'b', 'c', 'c', 'c']
 Output: ['a', '2', 'b', 'c', '3']
 ```
-
+## 44- Map() function --Tutorial--
+How to use map() function in python.
