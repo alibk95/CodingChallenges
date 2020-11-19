@@ -651,6 +651,23 @@ class Solution:
             x_ = x
         return str_
 
+    # 44 Tutorial
+    def map_function(self, li):
+        newList = []
+        for num in li:
+            newList.append(num ** num)
+        print(newList)
+
+        def func(li):
+            return li ** li
+        ### OR simpler and more efficient is using the map() function
+        print(list(map(func, li)))
+        # Basically what it does is that applies the function to each element in the list.
+
+        ### OR using list comprehensions
+        print([func(x) for x in li])
+
+        return None
 
 
 # 6
@@ -885,5 +902,9 @@ class MaxStack:
 # print(Solution().roman_to_int(str_))
 
 # Driver code 43: Compress String
-l = ['a', 'a', 'b', 'c', 'c', 'c']
-print(Solution().compress(l))
+# l = ['a', 'a', 'b', 'c', 'c', 'c']
+# print(Solution().compress(l))
+
+# Driver code 44: map function (Tutorial)
+# li = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# print(Solution().map_function(li))
